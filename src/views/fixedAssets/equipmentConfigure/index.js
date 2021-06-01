@@ -220,8 +220,8 @@ class EpuipmentConfigure extends Component {
                         </div>
                         <div className="line"></div>
                         <div style={{marginTop: "15px"}}>
-                            <Button className="button" onClick={ this.searchInfo }>搜索</Button>
-                            <Button className="button" onClick={ this.handleReset }>重置</Button>
+                            <Button className="buttons" onClick={ this.searchInfo }>搜索</Button>
+                            <Button className="buttons" onClick={ this.handleReset }>重置</Button>
                         </div>
                     </div>
                     <ConfigureTalbe 

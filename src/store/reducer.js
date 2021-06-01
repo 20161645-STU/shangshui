@@ -8,12 +8,11 @@
  */
 import { combineReducers } from 'redux-immutable';
 import { reducer as indexReducer} from '../components/index/store';
-import { reducer as equipmentProcess } from '../views/basicInfo/equipmentProcess/store'
+
 
 
 const reducer = combineReducers({
-    index: indexReducer,
-    equipmentProcess: equipmentProcess,
+    index: indexReducer
 });
 
 export default reducer;

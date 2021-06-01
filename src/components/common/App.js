@@ -10,9 +10,9 @@ import { Model } from '../../dataModule/testBone';
 import SideMenu from './SideMenu';
 import HeaderCustom from './HeaderCustom';
 // import noMatch from './404';
-import PumpInfo from '../../views/basicInfo/pumpsinfo'
-import EngineInfo from '../../views/basicInfo/engineInfo';
-import SensorInfo from '../../views/basicInfo/sensorInfo';
+// import PumpInfo from '../../views/basicInfo/pumpsinfo'
+// import EngineInfo from '../../views/basicInfo/engineInfo';
+// import SensorInfo from '../../views/basicInfo/sensorInfo';
 import EpuipmentInfo from '../../views/fixedAssets/equipmentInfo';
 import MaintenanceIndex from '../../views/maintenance/index';
 import MessageIndex from '../../views/Message/MesCustomer/MessageIndex';
@@ -34,7 +34,7 @@ import EpuipmentConfigure from '../../views/fixedAssets/equipmentConfigure';
 import EpuipmentAllocation from '../../views/fixedAssets/equipmentAllocation';
 
 // 配置流程
-import EpuipmentProInfo from '../../views/basicInfo/equipmentProcess/index'
+// import EpuipmentProInfo from '../../views/basicInfo/equipmentProcess/index'
 
 //客户端页面
 import  ClientIndex  from '../../views/ClientViews/index/index.js';
@@ -134,7 +134,7 @@ class App extends Component {verifyUrl
               </Sider>
               <Content style={{ padding: '0 24px', minHeight: 'calc(100vh - 111px)' }}>
                 <Switch>
-                  <Route path='/app/equipmentProcess' component={(props) => <EpuipmentProInfo {...props} />} />,
+                  {/* <Route path='/app/equipmentProcess' component={(props) => <EpuipmentProInfo {...props} />} />, */}
                   { Array.from(roleData).map((item,index) => {
                     if(item === 'equipment_maintenance_retrieve') {
                       return [<Route exact path='/app' component={ MaintenanceIndex} />,
@@ -150,19 +150,21 @@ class App extends Component {verifyUrl
                       ]
                     }else if( item === 'pump_information_view') {
                       return [<Route exact path='/app' component={ MaintenanceIndex} />,
-                              <Route path='/app/pumps' component={(props) => <PumpInfo {...props} />} />,
+                              // <Route path='/app/pumps' component={(props) => <PumpInfo {...props} />} />,
                       ]
                     }else if( item === 'engine_message_retrieve') {
                       return [
                         <Route exact path='/app' component={ MaintenanceIndex} />,
-                        <Route path='/app/engine' component={EngineInfo} />,
+                        // <Route path='/app/engine' component={EngineInfo} />,
                       ]
-                    }else if( item === 'sensor_message_retrieve') {
-                      return [
-                        <Route exact path='/app' component={ MaintenanceIndex} />,
-                        <Route path='/app/sensor' component={(props) => <SensorInfo {...props} />} />,
-                    ]
-                    }else if( item === 'client_manage') {
+                    }
+                    // else if (item === 'sensor_message_retrieve') {
+                    //   return [
+                    //     <Route exact path='/app' component={ MaintenanceIndex} />,
+                    //     <Route path='/app/sensor' component={(props) => <SensorInfo {...props} />} />,
+                    // ]
+                    // }
+                    else if (item === 'client_manage') {
                       return [
                         <Route path='/app/clientIndex' component={ClientIndex} />,
                         <Route path='/app/clientMonitor/:equipment_aid' component={(props) => <ClientMonitor {...props}/>} />,

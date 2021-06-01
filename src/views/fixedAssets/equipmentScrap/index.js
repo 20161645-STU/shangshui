@@ -170,8 +170,8 @@ class Equipment extends Component{
                         />
                     </div>
                     <div style={{marginTop: "40px",marginLeft: "280px"}}>
-                            <Button className="button" onClick={ this.searchInfo }>搜索</Button>
-                            <Button className="button" onClick={ this.handleReset }>重置</Button>
+                            <Button className="buttons" onClick={ this.searchInfo }>搜索</Button>
+                            <Button className="buttons" onClick={ this.handleReset }>重置</Button>
                     </div>
                 </div>
                 <EquipmentScrapTable

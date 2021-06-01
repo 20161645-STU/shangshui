@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Input,Button, message } from 'antd';
 import '../../../style/wrapper.less';
-import '../../Message/style/Message.less';
 import MessageTable from './MessageTable';
 import AddMesCustomer from './AddMesCustomer';
 import {Model} from '../../../dataModule/testBone';
@@ -243,11 +242,11 @@ class MessageIndex extends Component{
                             />
                         </div>
                         <div style={{marginTop: "40px",marginLeft: "260px"}}>
-                            <Button type='primary' className="button" onClick={ this.searchInfo }>搜索</Button>
-                            <Button className="button" onClick={this.handleReset}>重置</Button>
+                            <Button type='primary'  onClick={ this.searchInfo }>搜索</Button>
+                            <Button className="buttons" onClick={this.handleReset}>重置</Button>
                             { roleData.map((item,index) => {
                                 if ( item === 'user_manage') {
-                                    return <Button type="primary" className="button" onClick={this.showAddModal} key={index}>创建客户信息</Button>
+                                    return <Button type="primary" className="buttons" onClick={this.showAddModal} key={index}>创建客户信息</Button>
                                 }
                                 return null;
                             })}
