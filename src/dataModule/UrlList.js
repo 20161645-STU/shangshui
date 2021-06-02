@@ -21,9 +21,10 @@ export const addPumpActionUrl = 'pump_permission/'            //增加泵的操�
 export const unequipmentPimpUrl = 'app/get_unequipped_pump/'   //获取未使用的所有的泵
 
 export const enginInfoUrl = 'main_engine/';
-export const messageCUrl = 'client/';
-export const contactUrl = 'contact_people/';
-export const ClientContactUrl = 'app/ClientContactPeople/';
+
+export const messageCUrl = 'client/';      //获得所有客户信息   创建新客户  删除  编辑
+export const contactUrl = 'contact_people/';                //增加联系人  编辑  删除
+export const ClientContactUrl = 'app/ClientContactPeople/';     //获取客户联系人信息
 
 export const sensorInfoUrl = 'app/typemodel/';
 export const sensorTypeUrl = 'app/sensor_type/';
@@ -35,13 +36,15 @@ export const addSensorUrl = 'sensor/';                          //增加传感�
 export const allEngineName = 'app/main_engine_code_and_name/'   //获取所有主机的名称和编号(状态)
 
 export const epuipmentInfoUrl = 'app/equipment_to_engine_name/';  //设备的所有信息
-export const sensorOfequipmentUrl = 'app/equipment_to_sensor3/';  //设备对应的传感器的路由
-export const pumpsOfequipmentUrl = 'app/get_equipped_pump/';        //设备对应的泵的路由
-export const addEquipment = 'equipment/';                         //新增设备
-export const editEquipment = 'equipment/';                        //新增设备
-export const sensorequipmentUrl = 'app/deviceNum_to_typename/'    //通过设备编号获取传感器信息  好像没用了
-export const equipmentConfiureUrl = 'app/equipment_configuration_retrieve/'      //获取设备配置记录
-export const equipmentAllocation = 'app/equipment_allocation_retrieve/'          //设备调配配置记录
+export const sensorOfequipmentUrl = 'app/equipment_to_sensor3/';  //设备对应的传感器的路由   
+export const pumpsOfequipmentUrl = 'app/get_equipped_pump/';        //设备对应的泵的路由     x
+export const addEquipment = 'equipment/';                         //新增设备    
+export const editEquipment = 'equipment/';                        //编辑设备
+export const sensorequipmentUrl = 'app/deviceNum_to_typename/'    //通过设备编号获取传感器信息  好像没用了  x
+export const allcationEquipmentUrl = '/equipment_allocation/'   //发送调拨单数据
+
+export const equipmentConfiureUrl = 'app/equipment_configuration_retrieve/'      //获取设备配置记录     
+export const equipmentAllocation = 'app/equipment_allocation_retrieve/'          //设备调配配置记录    
 export const equipmentScrap = 'app/equipment_scrap_retrieve/'     //设备报废记录
 export const backToFactory = '/app/equipment_allocate_factory/'   //调拨回厂
 
@@ -61,20 +64,19 @@ export const ClientWaterPutUrl = 'water_quality_notice/'  //处理水质记录
 export const ScrapEquipmentUrl = 'equipment_scrap/'     //发送报废数据
 export const loginUrl = 'app/login_in/'                 //登录账号
 export const verifyUrl = 'app/verify/'                  //获得角色各种数据
-export const allcationEquipmentUrl = '/equipment_allocation/'   //发送调拨单数据
 export const autoControlUrl = '/auto_operation/'        //设备自动控制
 export const operationRecordUrl = 'app/get_operation_log/' // 设备使用日志记录
 export const getEquipmentPumsUrl = 'app/get_equipped_pump/' // 获得设备对应的泵信息
 export const getRealTimeDataUrl = 'real_time_data/' // 获得实时传感器数据
 
-export const role = 'role/'
-export const rolePower = 'app/role_power/'
-export const accountPower = 'app/verify/'
-export const outLoginUrl = 'app/logout/'
+export const role = 'role/'        //查看所有的角色
+export const rolePower = 'app/role_power/'    //获取角色对应权限
+export const accountPower = 'app/verify/'    //获取该账户对应权限
+export const outLoginUrl = 'app/logout/'     //登出
 
-export const user = 'user/'
+export const user = 'user/'   //查看账户信息  增加 编辑 删除 
 
-export const power = 'power/'
+export const power = 'power/'      //查看所有的权限 
 
 export const websocketUrl = '/app/websocket_relation/'
 

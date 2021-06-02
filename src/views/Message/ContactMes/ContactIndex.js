@@ -34,7 +34,7 @@ class contactmes extends Component{
         this.getClientUnit(this.props.client_id);
     }
 
-    //获取数据
+    //获取客户单位对应的数据
     getCurrentPage(params) {
         for (let i in params) {
             if (params[i] === undefined || params[i] === null) {
